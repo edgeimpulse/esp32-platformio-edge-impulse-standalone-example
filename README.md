@@ -1,9 +1,9 @@
-# ESP32 + PlatformIO + Edge Impulse - Standalone Example
+# ESP32 + PlatformIO + Edge Impulse Standalone Example
 
 ## Overview 
 This repository contains the minimal example code for running an Edge Impulse designed neural network on an ESP32 dev kit using PlatformIO.
 
-The project takes an existing Edge impulse Arduino standalone example, and adds the platformio metadata required to compile it outside of the Arduino IDE. If you'd like to run this code on your ESP32 device within the Arduino IDE instead of PlatformIO, check out our existing guide on the topic
+The project takes an existing Edge impulse Arduino standalone example, and adds the PlatformIO metadata required to compile it outside of the Arduino IDE. If you'd like to run this code on your ESP32 device within the Arduino IDE instead of PlatformIO, check out our existing guide on the topic
 - [Tutorial: Running your Impulse locally on your Arduino](https://docs.edgeimpulse.com/docs/running-your-impulse-arduino)
 
 ## Prerequisites
@@ -16,7 +16,7 @@ The project takes an existing Edge impulse Arduino standalone example, and adds 
 - You've set up [PlatfomIO](https://platformio.org/install) - the IDE, CLI, or vscode extension all work equally well here
 
 ## Standalone Firmware
-The Edge Impulse standalone examples show the minimum amount of code required to run any machine learning model trained in edge impulse on a given platform, with no other dependencies like sensor drivers or connectivity. 
+The Edge Impulse standalone examples show the minimum amount of code required to run any machine learning model trained in Edge Impulse on a given platform, with no other dependencies like sensor drivers.
 
 This means that rather than run the model on live sensor data, this example will test that a static input buffer of arbitrary sensor data performs identically between the Edge Impulse Studio and the end device. After implementing this, definitely check out [Next Steps](#next-steps) for some examples of providing live sensor data as input to the Impulse.
 
@@ -25,10 +25,10 @@ This means that rather than run the model on live sensor data, this example will
 ### 1. Deploying your Impulse
 Head over to your Edge Impulse project (created in one of the tutorials linked above), and go to Deployment. From here you can create the full library which contains the impulse and all external required libraries. Select Arduino library and click Build to create the library. Then download the .zip file, and place it in the `./lib/` directory of this repository.
 
-If you don't have an Edge Impulse project to test, you can use the .zip file library included in `./lib/` in this repository. This is a pre-trained model that implements basic person detection. IE: is a person currently visible in an image.
+If you don't have an Edge Impulse project to test, you can use the .zip file library included in `./lib/`. This is a pre-trained model that implements basic person detection. IE: is a person currently visible in an image.
 
 ### 2. Including your Library in PlatformIO
-Open the `platformio.ini` file in the root directory of this repository, and change replace **line 16** to point to your newly downloaded .zip file library:
+Open the `platformio.ini` file in the root directory of this repository, and replace **line 16** to point to your newly downloaded .zip file library:
 
 ```
 15 lib_deps = 
@@ -44,7 +44,7 @@ Next, open `src/main.cpp` and on **line 28**, change the top level edge-impulse 
 28 #include <Person_Detection_Classification__inferencing.h>
 ```
 
-If you aren't sure what the header name for your project would be, peek inside the .zip file library and copy the name of the single header file in the root directory of the library.
+If you aren't sure what the header name for your project would be, peek inside the .zip file library and copy the name of the single header file in the root directory.
 
 ### 3. Running the impulse
 
@@ -64,7 +64,7 @@ static const float features[] = {
 };
 ```
 
-Finally, build your example to check that everything compiles correctly. If you installed the PlatformIO command line, this is. done via:
+Finally, build your example to check that everything compiles correctly. If you installed the PlatformIO command line, this is done via:
 ```
 platformio run --environment esp32dev
 ```
@@ -100,10 +100,9 @@ run_classifier_returned: 0
 Check that this matches the values in the **Live Classification** tab in the Edge Impulse Studio.
 
 ## Next Steps
-You now have your impulse running on your ESP32 dev kit, but we don't have any connected sensors yet!
-
-ESP32 sensor integration examples:
+You now have your impulse running on your ESP32 dev kit! but we don't have any connected sensors yet. From here, check out our existing ESP32 sensor integration examples:
 - [ESP32 + ArduCAM minimal example](link tbd)
 - [ESP32Cam Example, by Louis Moreau](https://github.com/edgeimpulse/example-esp32-cam)
 
-Finally, a sensor generic demonstration on how to plug sensor values into the classifier wihthin the arduino framework can be found here: [Data forwarder - classifying data (Arduino)](https://docs.edgeimpulse.com/docs/cli-data-forwarder#classifying-data-arduino).
+As well as a sensor-generic demonstration on plugging values into the classifier within the arduino framework:
+- [Data forwarder - classifying data (Arduino)](https://docs.edgeimpulse.com/docs/cli-data-forwarder#classifying-data-arduino).
