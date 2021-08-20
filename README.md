@@ -1,9 +1,9 @@
 # ESP32 + PlatformIO + Edge Impulse - Standalone Example
 
 ## Overview 
-This repository contains the minimal example code for running an Edge Impulse designed neural network on an ESP32 dev kit using platformio within the arduino framework.
+This repository contains the minimal example code for running an Edge Impulse designed neural network on an ESP32 dev kit using PlatformIO.
 
-The project takes the existing Edge impulse Arduino standalone example, and adds the platformio metadata required to compile it outside of the Arduino IDE. If you'd like to run this code on your ESP32 device within the Arduino IDE instead of PlatformIO, check out our existing guide on the topic
+The project takes an existing Edge impulse Arduino standalone example, and adds the platformio metadata required to compile it outside of the Arduino IDE. If you'd like to run this code on your ESP32 device within the Arduino IDE instead of PlatformIO, check out our existing guide on the topic
 - [Tutorial: Running your Impulse locally on your Arduino](https://docs.edgeimpulse.com/docs/running-your-impulse-arduino)
 
 ## Prerequisites
