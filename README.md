@@ -54,7 +54,7 @@ With the project ready it's time to verify that the application works. Head back
 
 To verify that the local application classifies the same, we need the raw features for this timestamp. To do so click on the 'Copy to clipboard' button next to 'Raw features'. This will copy the raw values from this validation file, before any signal processing or inferencing happened.
 
-[raw-features](https://files.readme.io/78b905e-ce5b1ab-wijhf23i-3.png)
+![raw-features](https://files.readme.io/78b905e-ce5b1ab-wijhf23i-3.png)
 
 In main.cpp paste the raw features inside the `static const float features[]` definition, for example:
 
