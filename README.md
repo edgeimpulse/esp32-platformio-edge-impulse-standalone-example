@@ -25,7 +25,7 @@ This means that rather than run the model on live sensor data, this example will
 ### 1. Deploying your Impulse
 Head over to your Edge Impulse project (created in one of the tutorials linked above), and go to Deployment. From here you can create the full library which contains the impulse and all external required libraries. Select Arduino library and click Build to create the library. Then download the .zip file, and place it in the `./lib/` directory of this repository.
 
-If you don't have an Edge Impulse project to test, you can use the .zip file library included in `./lib/` in this repository. This is a pre-trained model that implements basic person detection. IE: is a person currently in the frame.
+If you don't have an Edge Impulse project to test, you can use the .zip file library included in `./lib/` in this repository. This is a pre-trained model that implements basic person detection. IE: is a person currently visible in an image.
 
 ### 2. Including your Library in PlatformIO
 Open the `platformio.ini` file in the root directory of this repository, and change replace **line 16** to point to your newly downloaded .zip file library:
