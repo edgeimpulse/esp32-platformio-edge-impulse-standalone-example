@@ -1,1 +1,0 @@
-{"type": "library", "name": "Person_Detection_Classification__inferencing", "version": "1.0.3", "spec": {"owner": null, "id": null, "name": "edge-impulse-library", "requirements": null, "url": "file://./lib/edge-impulse-library.zip"}}
