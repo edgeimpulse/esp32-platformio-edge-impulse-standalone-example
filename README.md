@@ -101,7 +101,7 @@ Check that this matches the values in the **Live Classification** tab in the Edg
 
 ## Next Steps
 You now have your impulse running on your ESP32 dev kit! but we don't have any connected sensors yet. From here, check out our existing ESP32 sensor integration examples:
-- [ESP32 + ArduCAM minimal example](link tbd)
+- [ESP32 + ArduCAM minimal example](https://github.com/Dasch0/esp32-arducam-edge-impulse)
 - [ESP32Cam Example, by Louis Moreau](https://github.com/edgeimpulse/example-esp32-cam)
 
 As well as a sensor-generic demonstration on plugging values into the classifier within the arduino framework:
